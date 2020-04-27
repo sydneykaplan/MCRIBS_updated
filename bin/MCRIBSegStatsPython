@@ -193,7 +193,7 @@ FID.write("# Measure SupraTentorialNotVentVox, SupraTentorialVolNotVentVox, Supr
 FID.write("# Measure Mask, MaskVol, Mask Volume, " + str(numpy.count_nonzero(BrainmaskIMG) * voxelSize) + ", mm^3\n")
 
 # subcortical grey volume
-SubCortGMMask = numpy.in1d(ASEGIMG, numpy.array([11, 12, 13, 17, 18, 50, 51, 52, 53, 54]))
+SubCortGMMask = numpy.in1d(ASEGIMG, numpy.array([9, 11, 12, 13, 17, 18, 48, 50, 51, 52, 53, 54]))
 
 FID.write("# Measure SubCortGray, SubCortGrayVol, Subcortical gray matter volume, " + str(numpy.count_nonzero(SubCortGMMask) * voxelSize) + ", mm^3\n")
 
